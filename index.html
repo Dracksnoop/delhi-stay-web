@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DelhiStay - Book Hotels in Delhi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+<header class="site-header">
+
+    <a class="logo" href="#home"><span class="hindi">दिल्ली</span>Stay</a>
+    <nav id="site-nav">
+        <a href="#home">Home</a>
+        <a href="#areas">Explore Delhi</a>
+        <a href="#offers">Offers</a>
+        <a href="#why-us">Why Us</a>
+
+    </nav>
+    <button class="menu-toggle" type="button" aria-label="Menu">&#9776;</button>
+</header>
+
+<main>
+
+
+<div id="search-view">
+
+    <section class="hero" id="home">
+
+        <h1>Find Your Perfect Stay In <span class="hindi">दिल्ली</span></h1>
+        <p class="hero-sub">Search from the best hotels of Delhi and book your room in just a few clicks</p>
+
+        <form id="search-form" class="search-bar" autocomplete="off">
+            <div class="field grow">
+                <label for="destination">Destination</label>
+                <input id="destination" list="city-list" placeholder="Where are you going?" required>
+                <datalist id="city-list">
+                    <option value="Delhi, India"></option>
+                    <option value="New Delhi, India"></option>
+                </datalist>
+            </div>
+
+
+            <div class="field">
+                <label for="search-checkin">Check-in</label>
+                <input type="date" id="search-checkin">
+            </div>
+
+            <div class="field">
+                <label for="search-checkout">Check-out</label>
+                <input type="date" id="search-checkout">
+            </div>
+
+
+            <div class="field narrow">
+                <label for="search-rooms">Rooms</label>
+                <select id="search-rooms">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </div>
+
+
+            <div class="field narrow">
+                <label for="search-guests">Guests</label>
+                <select id="search-guests">
+                    <option>1</option>
+                    <option selected>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+
+            </div>
+
+            <button class="btn search-btn"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+        </form>
+        <p class="search-note" hidden></p>
+
+    </section>
+
+    <section id="results" hidden>
+
+        <h2 class="heading">Hotels In <span class="hindi">दिल्ली</span></h2>
+        <p class="subtext" id="result-count"></p>
+        <div id="hotel-list"></div>
+
+    </section>
+
+    <section class="areas" id="areas">
+
+        <h2 class="heading">Popular Areas In <span class="hindi">दिल्ली</span></h2>
+        <p class="subtext">Explore hotels in the most famous areas of Delhi</p>
+        <div class="area-grid">
+
+            <button type="button" class="area-card hotel1-img">
+                <span class="area-label"><strong>Connaught Place</strong><small>1 hotel</small></span>
+            </button>
+
+            <button type="button" class="area-card hotel2-img">
+                <span class="area-label"><strong>Karol Bagh</strong><small>1 hotel</small></span>
+            </button>
+
+            <button type="button" class="area-card hotel3-img">
+                <span class="area-label"><strong>Aerocity</strong><small>1 hotel</small></span>
+            </button>
+
+            <button type="button" class="area-card hotel4-img">
+                <span class="area-label"><strong>Hauz Khas</strong><small>1 hotel</small></span>
+            </button>
+
+            <button type="button" class="area-card hotel5-img">
+                <span class="area-label"><strong>Chandni Chowk</strong><small>1 hotel</small></span>
+            </button>
+
+            <button type="button" class="area-card hotel6-img">
+                <span class="area-label"><strong>Dwarka</strong><small>1 hotel</small></span>
+            </button>
+
+        </div>
+    </section>
+
+
+    <section class="offers" id="offers">
+
+        <h2 class="heading"><span class="hindi">स्पेशल</span> Offers</h2>
+        <p class="subtext">Use these coupon codes and save money on your bookings</p>
+        <div class="offers-grid">
+            <article class="offer-card">
+                <h3>20% OFF On First Booking</h3>
+                <p>New on DelhiStay? Get flat 20% off on your first hotel booking with us.</p>
+                <div class="code-row">
+                    <span class="code">FIRST20</span>
+                    <button type="button" class="copy-btn" data-code="FIRST20">Copy Code</button>
+                </div>
+
+            </article>
+            <article class="offer-card">
+                <h3>15% OFF On Weekend Stays</h3>
+                <p>Plan your weekend getaway and get 15% off on Friday to Sunday bookings.</p>
+                <div class="code-row">
+                    <span class="code">WEEKEND15</span>
+                    <button type="button" class="copy-btn" data-code="WEEKEND15">Copy Code</button>
+                </div>
+
+
+            </article>
+            <article class="offer-card">
+                <h3>Flat ₹500 OFF In Aerocity</h3>
+                <p>Book any hotel near IGI Airport and get flat ₹500 off on your stay.</p>
+                <div class="code-row">
+                    <span class="code">AERO500</span>
+                    <button type="button" class="copy-btn" data-code="AERO500">Copy Code</button>
+                </div>
+
+            </article>
+        </div>
+    </section>
+
+
+
+    <section class="why-us" id="why-us">
+
+        <h2 class="heading">Why <span class="hindi">बुक</span> With Us</h2>
+        <div class="perks">
+            <article class="perk">
+                <i class="fa-solid fa-tags"></i>
+                <h3>Best Price Guarantee</h3>
+                <p>We give you the lowest prices on all hotels. If you find a cheaper price anywhere else, we will match it.</p>
+            </article>
+            <article class="perk">
+                <i class="fa-solid fa-circle-check"></i>
+                <h3>Verified Hotels</h3>
+                <p>Every hotel listed on DelhiStay is personally verified by our team so you always get what you see.</p>
+            </article>
+            <article class="perk">
+                <i class="fa-solid fa-headset"></i>
+                <h3>24x7 Support</h3>
+                <p>Our support team is available day and night to help you with your bookings and queries.</p>
+            </article>
+
+        </div>
+    </section>
+
+</div>
+
+
+<div id="hotel-view" hidden>
+
+    <section class="hotel-detail">
+        <a href="#results" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to search</a>
+
+        <div class="detail-head">
+
+            <div>
+                <h1 id="hotel-name"></h1>
+                <p class="hotel-location"><i class="fa-solid fa-location-dot"></i> <span id="hotel-location"></span></p>
+            </div>
+            <div class="detail-rating">
+                <span class="rating-badge" id="hotel-rating"></span>
+                <p class="muted" id="hotel-reviews"></p>
+            </div>
+        </div>
+
+        <div class="gallery">
+
+            <img class="main-photo" id="hotel-photo" src="" alt="">
+            <div class="thumb-grid">
+                <img src="images/room1.jpg" alt="Room">
+                <img src="images/room2.jpg" alt="Room">
+                <img src="images/pool.jpg" alt="Swimming pool">
+                <img src="images/gym.jpg" alt="Gym">
+            </div>
+
+        </div>
+
+        <div class="detail-grid">
+
+            <article class="about">
+                <h2>About This Hotel</h2>
+                <p id="hotel-desc"></p>
+                <h2>Amenities</h2>
+                <ul class="amenities" id="hotel-amenities"></ul>
+
+            </article>
+
+            <aside class="booking-panel">
+
+                <h3><span class="hindi">बुक</span> This Hotel</h3>
+                <p class="price-line">₹<span id="hotel-price"></span> <span class="muted">/ per night</span></p>
+
+                <form id="booking-form">
+
+                    <label for="guest-name">Full Name</label>
+                    <input id="guest-name" placeholder="Enter your full name" required>
+
+                    <label for="guest-email">Email</label>
+                    <input type="email" id="guest-email" placeholder="Enter your email id" required>
+
+                    <label for="guest-phone">Mobile Number</label>
+                    <input type="tel" id="guest-phone" placeholder="10 digit mobile number"
+                           pattern="[0-9]{10}" title="10 digit mobile number" required>
+
+                    <div class="pair">
+
+                        <div>
+                            <label for="checkin">Check-in</label>
+                            <input type="date" id="checkin" required>
+                        </div>
+                        <div>
+                            <label for="checkout">Check-out</label>
+                            <input type="date" id="checkout" required>
+                        </div>
+                    </div>
+
+                    <div class="pair">
+
+                        <div>
+                            <label for="room-type">Room Type</label>
+                            <select id="room-type">
+                                <option value="standard">Standard Room</option>
+                                <option value="deluxe">Deluxe Room (+₹1000)</option>
+                                <option value="suite">Suite (+₹2500)</option>
+                            </select>
+
+                        </div>
+                        <div>
+                            <label for="room-count">Rooms</label>
+                            <select id="room-count">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+
+                        </div>
+                    </div>
+
+                    <label for="guest-count">Guests</label>
+                    <select id="guest-count">
+                        <option>1</option>
+                        <option selected>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                    </select>
+
+                    <label for="coupon-code">Coupon Code <span class="muted">(optional)</span></label>
+                    <div class="coupon-row">
+                        <input id="coupon-code" placeholder="e.g. FIRST20">
+                        <button type="button" class="btn" id="apply-coupon">Apply</button>
+                    </div>
+                    <p id="coupon-msg" class="coupon-msg"></p>
+
+                    <p id="discount-line" class="discount" hidden></p>
+                    <p id="total-amount" class="total">Total: ₹0</p>
+                    <p id="form-error" class="form-error" hidden></p>
+
+                    <button class="btn btn-block">Book Now</button>
+                </form>
+
+                <div id="booking-confirm" class="confirm" hidden>
+
+                    <h3><i class="fa-solid fa-circle-check"></i> Booking Confirmed!</h3>
+                    <p>Reference: <strong id="conf-ref"></strong></p>
+                    <p>Hotel: <strong id="conf-hotel"></strong></p>
+                    <p>Room: <strong id="conf-room"></strong></p>
+                    <p>Dates: <strong id="conf-dates"></strong></p>
+                    <p id="conf-discount-row" hidden>Coupon: <strong id="conf-discount"></strong></p>
+                    <p>Total: <strong id="conf-total"></strong></p>
+                    <p class="muted small">A confirmation mail will be sent to <span id="conf-email"></span>.</p>
+                    <button type="button" class="btn" id="book-again">Book Again</button>
+                </div>
+                
+            </aside>
+        </div>
+    </section>
+</div>
+
+</main>
+
+<footer class="site-footer" id="contact">
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h3><span class="hindi">दिल्ली</span>Stay</h3>
+            <p>DelhiStay helps you find and book the best hotels in Delhi at the lowest prices. Your perfect stay is just a few clicks away.</p>
+        </div>
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <a href="#home">Home</a>
+            <a href="#areas">Explore Delhi</a>
+            <a href="#offers">Offers</a>
+        </div>
+        <div class="footer-col">
+            <h3>Contact Us</h3>
+            <p><i class="fa-solid fa-location-dot"></i> B8, B Block, Sector 59, Noida, Uttar Pradesh 201309</p>
+            <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+            <p><i class="fa-solid fa-envelope"></i> support@delhistay.com</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
