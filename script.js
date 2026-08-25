@@ -4,8 +4,6 @@ const HOTELS = [
         name: "Hotel Royal Palace",
         location: "Connaught Place, New Delhi",
         price: 4999,
-        rating: "4.6",
-        reviews: 1240,
         image: "hotel1",
         tagline: "The classic CP address",
         nearestMetro: "Rajiv Chowk",
@@ -17,8 +15,6 @@ const HOTELS = [
         name: "The Grand Karol Bagh",
         location: "Karol Bagh, New Delhi",
         price: 2999,
-        rating: "4.2",
-        reviews: 986,
         image: "hotel2",
         tagline: "Best pick for shopping trips",
         nearestMetro: "Karol Bagh",
@@ -30,8 +26,6 @@ const HOTELS = [
         name: "Hotel Skyline",
         location: "Aerocity, New Delhi (Near IGI Airport)",
         price: 5499,
-        rating: "4.7",
-        reviews: 2105,
         image: "hotel3",
         tagline: "10 min from T3, free shuttle",
         nearestMetro: "Aerocity",
@@ -43,8 +37,6 @@ const HOTELS = [
         name: "Green Leaf Residency",
         location: "Hauz Khas, New Delhi",
         price: 3499,
-        rating: "4.4",
-        reviews: 764,
         image: "hotel4",
         tagline: "Quiet property behind HKV",
         description: "A quiet property tucked behind Hauz Khas Village - you can walk to the cafes, the art galleries and Deer Park. Suits couples and younger travellers more than families; the vibe is closer to a homestay than a hotel. The garden at the back is genuinely nice in winter.",
@@ -55,8 +47,6 @@ const HOTELS = [
         name: "Heritage Inn",
         location: "Chandni Chowk, Old Delhi",
         price: 1999,
-        rating: "4.0",
-        reviews: 1532,
         image: "hotel5",
         tagline: "Cheapest decent stay in Old Delhi",
         description: "Budget option for exploring Old Delhi on foot. Red Fort, Jama Masjid and Paranthe Wali Gali are all nearby, so you can cover the whole area without spending too much money on autos. Rooms are basic but clean.",
@@ -67,8 +57,6 @@ const HOTELS = [
         name: "Hotel City Park",
         location: "Dwarka, New Delhi",
         price: 2499,
-        rating: "4.1",
-        reviews: 645,
         image: "hotel6",
         tagline: "Good for families, right on the metro line",
         nearestMetro: "Dwarka Sector 21",
@@ -117,7 +105,7 @@ $("#search-form").addEventListener("submit", (e) => {
 function renderResults() {
     $("#hotel-list").innerHTML = HOTELS.map((hotel) => `
         <article class="hotel-card">
-            <img class="hotel-photo" src="images/${hotel.image}.jpg" alt="${hotel.name}">
+            <img class="hotel-photo" src="images/${hotel.image}.jpg">
             <div class="hotel-summary">
                 <h3>${hotel.name}</h3>
                 <p class="hotel-location"><i class="fa-solid fa-location-dot"></i> ${hotel.location}</p>
@@ -136,7 +124,7 @@ function renderResults() {
 
 $(".area-grid").addEventListener("click", (e) => {
     if (!e.target.closest(".area-card")) return;
-    $("#destination").value = "Delhi, India";
+    $("#destination").value = "New Delhi, India";
     renderResults();
 });
 
@@ -158,7 +146,7 @@ function handleRoute() {
     } else {
         $("#hotel-view").hidden = true;
         $("#search-view").hidden = false;
-        document.title = "DelhiStay - Book Hotels in Delhi";
+        document.title = "DelhiStay - Book Your Hotel Now";
     }
 }
 
@@ -175,12 +163,9 @@ function openHotel(id) {
         locationText += " · nearest metro: " + activeHotel.nearestMetro;
     }
     $("#hotel-location").textContent = locationText;
-    $("#hotel-rating").innerHTML = `${activeHotel.rating} <i class="fa-solid fa-star"></i>`;
-    $("#hotel-reviews").textContent = activeHotel.reviews + " reviews";
     $("#hotel-desc").textContent = activeHotel.description;
     $("#hotel-price").textContent = activeHotel.price;
     $("#hotel-photo").src = "images/" + activeHotel.image + ".jpg";
-    $("#hotel-photo").alt = activeHotel.name;
 
     let items = "";
     for (const amenity of activeHotel.amenities) {
@@ -278,15 +263,7 @@ bookingForm.addEventListener("submit", (e) => {
     }
     formError.hidden = true;
 
-    $("#conf-ref").textContent = "DST" + Date.now().toString().slice(-6);
-    $("#conf-hotel").textContent = activeHotel.name;
-    $("#conf-room").textContent = `${$("#room-type").selectedOptions[0].text} × ${$("#room-count").value} · ${$("#guest-count").value} guests`;
-    $("#conf-dates").textContent = `${$("#checkin").value} → ${$("#checkout").value} (${nights} night${nights > 1 ? "s" : ""})`;
-    $("#conf-total").textContent = "₹" + (total - discount);
-    $("#conf-email").textContent = $("#guest-email").value;
-
-    $("#conf-discount-row").hidden = !discount;
-    if (discount) $("#conf-discount").textContent = `${activeCoupon} (-₹${discount})`;
+    $("#conf-msg").textContent = "Thank you " + $("#guest-name").value + "! Your booking at " + activeHotel.name + " is done. Total amount is ₹" + (total - discount) + ". We have sent the details to your email.";
 
     bookingForm.hidden = true;
     $("#booking-confirm").hidden = false;

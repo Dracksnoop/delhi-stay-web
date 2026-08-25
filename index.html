@@ -4,7 +4,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DelhiStay - Book Hotels in Delhi</title>
+    <title>DelhiStay - Book Your Hotel Now</title>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -41,7 +41,6 @@
                 <label for="destination">Destination</label>
                 <input id="destination" list="city-list" placeholder="Where are you going?" required>
                 <datalist id="city-list">
-                    <option value="Delhi, India"></option>
                     <option value="New Delhi, India"></option>
                 </datalist>
             </div>
@@ -132,7 +131,6 @@
         <h2 class="heading"><span class="hindi">स्पेशल</span> Offers</h2>
         <p class="subtext">Use these coupon codes and save money on your bookings</p>
         <div class="offers-grid">
-            
             <article class="offer-card">
                 <h3>20% OFF On First Booking</h3>
                 <p>New on DelhiStay? Get flat 20% off on your first hotel booking with us.</p>
@@ -144,7 +142,6 @@
             </article>
             <article class="offer-card">
                 <h3>15% OFF On Weekend Stays</h3>
-
                 <p>Plan your weekend getaway and get 15% off on Friday to Sunday bookings.</p>
                 <div class="code-row">
                     <span class="code">WEEKEND15</span>
@@ -155,7 +152,7 @@
             </article>
             <article class="offer-card">
                 <h3>Flat ₹500 OFF In Aerocity</h3>
-                <p>Book any hotel near IGI Airport and get flat ₹500 off on your stay.</p>
+                <p>Book any hotel near Airport and get flat ₹500 off.</p>
                 <div class="code-row">
                     <span class="code">AERO500</span>
                     <button type="button" class="copy-btn" data-code="AERO500">Copy Code</button>
@@ -204,20 +201,16 @@
                 <h1 id="hotel-name"></h1>
                 <p class="hotel-location"><i class="fa-solid fa-location-dot"></i> <span id="hotel-location"></span></p>
             </div>
-            <div class="detail-rating">
-                <span class="rating-badge" id="hotel-rating"></span>
-                <p class="muted" id="hotel-reviews"></p>
-            </div>
         </div>
 
         <div class="gallery">
 
-            <img class="main-photo" id="hotel-photo" src="" alt="">
+            <img class="main-photo" id="hotel-photo" src="">
             <div class="thumb-grid">
-                <img src="images/room1.jpg" alt="Room">
-                <img src="images/room2.jpg" alt="Room">
-                <img src="images/pool.jpg" alt="Swimming pool">
-                <img src="images/gym.jpg" alt="Gym">
+                <img src="images/room1.jpg">
+                <img src="images/room2.jpg">
+                <img src="images/pool.jpg">
+                <img src="images/gym.jpg">
             </div>
 
         </div>
@@ -309,14 +302,8 @@
 
                 <div id="booking-confirm" class="confirm" hidden>
 
-                    <h3><i class="fa-solid fa-circle-check"></i> Booking Confirmed!</h3>
-                    <p>Reference: <strong id="conf-ref"></strong></p>
-                    <p>Hotel: <strong id="conf-hotel"></strong></p>
-                    <p>Room: <strong id="conf-room"></strong></p>
-                    <p>Dates: <strong id="conf-dates"></strong></p>
-                    <p id="conf-discount-row" hidden>Coupon: <strong id="conf-discount"></strong></p>
-                    <p>Total: <strong id="conf-total"></strong></p>
-                    <p class="muted small">A confirmation mail will be sent to <span id="conf-email"></span>.</p>
+                    <h3>Booking Confirmed!</h3>
+                    <p id="conf-msg"></p>
                     <button type="button" class="btn" id="book-again">Book Again</button>
                 </div>
                 
@@ -327,7 +314,7 @@
 
 </main>
 
-<footer class="site-footer" id="contact">
+<footer class="site-footer">
     <div class="footer-grid">
         <div class="footer-col">
             <h3><span class="hindi">दिल्ली</span>Stay</h3>
@@ -342,7 +329,7 @@
         <div class="footer-col">
             <h3>Contact Us</h3>
             <p><i class="fa-solid fa-location-dot"></i> B8, B Block, Sector 59, Noida, Uttar Pradesh 201309</p>
-            <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+            <p><i class="fa-solid fa-phone"></i> +91 9999999999</p>
             <p><i class="fa-solid fa-envelope"></i> support@delhistay.com</p>
         </div>
     </div>
@@ -350,8 +337,4 @@
 
 <script src="script.js"></script>
 </body>
-
 </html>
-<div>
-
-</div>
