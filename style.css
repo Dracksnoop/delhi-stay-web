@@ -121,6 +121,7 @@ label {
 }
 
 .rating-badge i {
+
     color: var(--yellow);
     font-size: 12px;
 }
@@ -216,16 +217,20 @@ label {
 }
 
 .field {
+
     flex: 1;
-    min-width: 140px;
+     min-width: 140px;
 }
 
 .field.grow {
+
+
     flex: 2;
     min-width: 200px;
 }
 
 .field.narrow {
+
     flex: .5;
     min-width: 80px;
 }
@@ -233,23 +238,26 @@ label {
 .field label {
     text-transform: uppercase;
     font-size: 12px;
-    font-weight: 600;
+      font-weight: 600;
     margin-bottom: 5px;
 }
 
 .search-btn {
+
     padding: 11px 30px;
-    font-size: 16px;
+     font-size: 16px;
 }
 
 .search-note {
+
     color: #ffd7d7;
     font-weight: 500;
-    font-size: 13px;
+     font-size: 13px;
     margin-top: 15px;
 }
 
 #results {
+
     padding: 70px 8%;
 }
 
@@ -262,6 +270,7 @@ label {
 }
 
 .hotel-card {
+
     border: 1px solid var(--line);
     border-radius: var(--radius);
     background: #fff;
@@ -278,17 +287,20 @@ label {
 }
 
 .hotel-summary {
+
     padding: 20px;
     flex: 1;
 }
 
 .hotel-summary h3 {
+
     font-size: 20px;
-    margin-bottom: 5px;
+     margin-bottom: 5px;
     color: var(--navy);
 }
 
 .hotel-location {
+
     color: #0071c2;
     font-size: 13px;
     margin-bottom: 8px;
@@ -335,10 +347,12 @@ label {
 
 
 .areas {
+
     padding: 70px 8%;
 }
 
 .area-grid {
+
     max-width: 1100px;
     margin: 0 auto;
     display: flex;
@@ -348,6 +362,7 @@ label {
 }
 
 .area-card {
+
     width: calc(33.33% - 14px);
     height: 190px;
     position: relative;
@@ -359,6 +374,7 @@ label {
 }
 
 .area-label {
+
     position: absolute;
     left: 0;
     right: 0;
@@ -369,6 +385,7 @@ label {
 }
 
 .area-label strong {
+
     font-size: 17px;
     color: #fff;
     display: block;
@@ -393,6 +410,7 @@ label {
 }
 
 .offer-card {
+
     background: var(--blue);
     width: 340px;
     padding: 30px 25px;
@@ -401,6 +419,7 @@ label {
 }
 
 .offer-card h3 {
+
     font-size: 19px;
     margin-bottom: 8px;
 }
@@ -413,6 +432,7 @@ label {
 }
 
 .code-row {
+
     display: flex;
     align-items: center;
     gap: 12px;
@@ -432,6 +452,7 @@ label {
     background: #fff;
     color: var(--navy);
     font-weight: 600;
+
     font-size: 13px;
     border: none;
     border-radius: 5px;
@@ -458,6 +479,8 @@ label {
 }
 
 .perk {
+
+    
     text-align: center;
     width: 320px;
     padding: 35px 25px;
