@@ -79,7 +79,6 @@ const HOTELS = [
 
 const RATE_EXTRAS = { standard: 0, deluxe: 1000, suite: 2500 };
 
-// FIXME: same codes are hardcoded in the offers section markup, keep both in sync
 const COUPONS = {
     FIRST20: { percent: 20 },
     WEEKEND15: { percent: 15 },
@@ -135,7 +134,6 @@ function renderResults() {
     $("#results").scrollIntoView({ behavior: "smooth" });
 }
 
-// area tiles are just a shortcut for searching Delhi
 $(".area-grid").addEventListener("click", (e) => {
     if (!e.target.closest(".area-card")) return;
     $("#destination").value = "Delhi, India";
@@ -190,7 +188,6 @@ function openHotel(id) {
     }
     $("#hotel-amenities").innerHTML = items;
 
-    // carry the search choices over so the user doesn't fill them twice
     if ($("#search-checkin").value) $("#checkin").value = $("#search-checkin").value;
     if ($("#search-checkout").value) $("#checkout").value = $("#search-checkout").value;
     $("#room-count").value = $("#search-rooms").value;
